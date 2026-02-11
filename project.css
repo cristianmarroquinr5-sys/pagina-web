@@ -4,64 +4,95 @@ index.html
 readme.md 
 body{
 }
+/* Estilos generales */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
-    background-color: #f4f4f4;
+    background-color: #f9f9f9;
+    color: #333;
 }
 
+/* Encabezado */
 header {
-    background-color: #2c3e50;
+    background: linear-gradient(90deg, #2c3e50, #34495e);
     color: white;
-    padding: 15px;
-    text-align: center;
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 10px;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-}
-
-section {
     padding: 20px;
     text-align: center;
 }
 
-.producto {
-    background: white;
-    margin: 15px auto;
-    padding: 15px;
-    border-radius: 8px;
-    width: 300px;
-    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
 }
 
+/* Navegación */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #ecf0f1;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #1abc9c;
+}
+
+/* Secciones */
+section {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+/* Tarjetas de producto */
+.producto {
+    background: white;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 12px;
+    width: 320px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease;
+}
+
+.producto:hover {
+    transform: scale(1.05);
+}
+
+.producto h3 {
+    color: #2c3e50;
+}
+
+/* Botones */
 button {
-    background-color: #3498db;
+    background-color: #1abc9c;
     color: white;
     border: none;
-    padding: 10px;
+    padding: 12px 20px;
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: 6px;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
 }
 
 button:hover {
-    background-color: #2980b9;
+    background-color: #16a085;
 }
 
+/* Footer */
 footer {
     background-color: #2c3e50;
     color: white;
     text-align: center;
-    padding: 10px;
+    padding: 15px;
+    margin-top: 40px;
 }
