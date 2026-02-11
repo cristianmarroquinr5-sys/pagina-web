@@ -1,50 +1,80 @@
-style.css
-script.js
-index.html
-README.md
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tienda de Computadores</title>
-  <!-- Estilos -->
-  <link rel="stylesheet" href="css/style.css">
+  <title>TechStore - Tienda de Computadores</title>
+  <link rel="stylesheet" href="project.css">
 </head>
 <body>
-  <!-- Encabezado -->
+  <!-- Encabezado y Navegación -->
   <header>
-    <h1>Tienda de Computadores</h1>
+    <div class="header-top">
+      <h1>🖥️ TechStore</h1>
+      <div class="carrito-container">
+        <button id="ver-carrito" class="btn-carrito">🛒 Carrito (<span id="cantidad-carrito">0</span>)</button>
+      </div>
+    </div>
     <nav>
       <ul>
-        <li><a href="#">Inicio</a></li>
-        <li><a href="#">Productos</a></li>
-        <li><a href="#">Contacto</a></li>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#productos">Productos</a></li>
+        <li><a href="#contacto">Contacto</a></li>
       </ul>
     </nav>
   </header>
 
-  <!-- Sección de productos -->
-  <section>
-    <div class="producto">
-      <h3>Computador Gamer</h3>
-      <p>Procesador Intel i7, 16GB RAM, RTX 3060</p>
-      <button>Comprar</button>
-    </div>
+  <!-- Sección Hero -->
+  <section id="inicio" class="hero">
+    <h2>Bienvenido a TechStore</h2>
+    <p>Tu tienda de confianza para los mejores computadores y equipos tecnológicos</p>
+  </section>
 
-    <div class="producto">
-      <h3>Laptop Profesional</h3>
-      <p>Procesador AMD Ryzen 5, 8GB RAM, SSD 512GB</p>
-      <button>Comprar</button>
+  <!-- Filtros -->
+  <section class="filtros">
+    <h3>Filtrar por categoría</h3>
+    <button class="filtro active" data-filtro="todos">Todos</button>
+    <button class="filtro" data-filtro="gamer">Gamer</button>
+    <button class="filtro" data-filtro="profesional">Profesional</button>
+    <button class="filtro" data-filtro="basico">Básico</button>
+  </section>
+
+  <!-- Sección de productos -->
+  <section id="productos" class="productos-container">
+    <h2>Nuestros Productos</h2>
+    <div class="productos-grid" id="productos-grid">
+      <!-- Los productos se insertan aquí con JavaScript -->
     </div>
+  </section>
+
+  <!-- Modal del Carrito -->
+  <div id="modal-carrito" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Tu Carrito de Compras</h2>
+      <div id="carrito-items"></div>
+      <div class="carrito-resumen">
+        <h3>Total: $<span id="total-carrito">0</span></h3>
+        <button id="btn-checkout" class="btn-comprar">Proceder al Pago</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Contacto -->
+  <section id="contacto" class="contacto">
+    <h2>Contacto</h2>
+    <p>📧 Email: info@techstore.com</p>
+    <p>📞 Teléfono: +57 3183050691</p>
+    <p>📍 Dirección: cra 4 1-38, Filandian-Quindio</p>
   </section>
 
   <!-- Footer -->
   <footer>
-    <p>© 2026 Tienda de Computadores - Cristian Marroquín</p>
+    <p>© 2026 TechStore - Todos los derechos reservados | Desarrollado por Cristian  Armel Marroquín Rodriguez
+    </p>
   </footer>
 
   <!-- Scripts -->
-  <script src="js/script.js"></script>
+  <script src="project.js"></script>
 </body>
 </html>
